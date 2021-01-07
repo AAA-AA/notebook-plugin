@@ -22,7 +22,7 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <toolWindow factoryClass="com.github.aaaaa.notebook.window.NotebookWindowFactory" id="noteWindow" anchor="right" icon="/img/notebook.svg">
+    <toolWindow factoryClass="com.github.aaaaa.notebook.window.NotebookWindowFactory" id="noteWindow" anchor="right">
 
 
     </toolWindow>
@@ -33,7 +33,7 @@
     <!-- Add your actions here -->
     <action id="PopApplicationId" class="com.github.aaaaa.notebook.action.PopAction" text="添加笔记"
             description="用于添加笔记">
-      <add-to-group group-id="BasicEditorPopupMenu" anchor="first"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
     </action>
   </actions>
 

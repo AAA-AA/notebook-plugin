@@ -1,5 +1,6 @@
 package com.github.aaaaa.notebook.dialog;
 
+import com.github.aaaaa.notebook.DataConvert;
 import com.github.aaaaa.notebook.Global;
 import com.github.aaaaa.notebook.NoteData;
 import com.intellij.openapi.ui.DialogWrapper;
@@ -42,7 +43,7 @@ public class AddNoteDialog extends DialogWrapper {
             String fileType = Global.FILE_NAME.substring(Global.FILE_NAME.lastIndexOf(".") + 1);
             NoteData noteData = new NoteData(t, m, Global.SELECTED_TEXT, Global.FILE_NAME, fileType);
             Global.NOTE_LIST.add(noteData);
-            System.out.println(Global.NOTE_LIST);
+            Global.DEFAULT_TABLE.addRow(DataConvert.convert(noteData));
         });
         panel.add(button);
         return panel;

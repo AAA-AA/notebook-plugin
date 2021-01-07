@@ -1,5 +1,6 @@
 package com.github.aaaaa.notebook.window;
 
+import com.github.aaaaa.notebook.Global;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import org.jetbrains.annotations.NotNull;
@@ -16,6 +17,12 @@ public class NotebookWindow {
     private JButton btnClose;
     private JPanel contentPanel;
 
+    private void init() {
+        noteContentList.setModel(Global.DEFAULT_TABLE);
+        noteContentList.setEnabled(true);
+    }
+
+
     public NotebookWindow(Project project, ToolWindow toolWindow) {
         btnCreateDoc.addActionListener(new ActionListener() {
             @Override
@@ -26,13 +33,13 @@ public class NotebookWindow {
         btnClear.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Global.reset();
             }
         });
         btnClose.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                toolWindow.hide(null);
             }
         });
     }

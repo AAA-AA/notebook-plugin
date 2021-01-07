@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 public class NotebookWindowFactory implements ToolWindowFactory {
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-        NotebookWindow window = new NotebookWindow(project, toolWindow);
+        NotebookWindow window = new NotebookWindow(project, toolWindow );
         ContentFactory factory = ContentFactory.SERVICE.getInstance();
         Content content = factory.createContent(window.getContentPanel(), "", false);
         toolWindow.getContentManager().addContent(content);
