@@ -49,10 +49,10 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="25c90" class="javax.swing.JButton" binding="btnCreateDoc">
+              <component id="cedf4" class="javax.swing.JButton" binding="btnCreateDoc">
                 <constraints/>
                 <properties>
-                  <text value="生成文档"/>
+                  <text value="Button"/>
                 </properties>
               </component>
               <component id="c321a" class="javax.swing.JButton" binding="btnClear">
