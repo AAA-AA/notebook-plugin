@@ -24,6 +24,7 @@ public class NotebookWindow {
 
 
     public NotebookWindow(Project project, ToolWindow toolWindow) {
+        init();
         btnCreateDoc.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
